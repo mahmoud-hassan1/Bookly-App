@@ -1,4 +1,5 @@
 abstract class Images{
 
- static String kLogo="assets/images/Logo.svg";
+ static const String kLogo="assets/images/Logo.svg";
+ static const String kSearchIcon="assets/images/Search.svg";
 }
