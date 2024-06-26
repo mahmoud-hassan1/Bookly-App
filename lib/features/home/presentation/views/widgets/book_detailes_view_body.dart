@@ -12,7 +12,6 @@ class BookDetailesViewBody extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
     return SafeArea(
       child: CustomScrollView(
-      
         slivers: [
           SliverFillRemaining(
             hasScrollBody: false,

@@ -16,7 +16,7 @@ class HomeViewBody extends StatelessWidget {
           slivers: [
             SliverToBoxAdapter(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CustomAppBar(),
                 SizedBox(height: 32),
@@ -26,7 +26,9 @@ class HomeViewBody extends StatelessWidget {
                   "Best Seller",
                   style: Styles.textStyle20,
                 ),
-                  SizedBox (height: 16,),
+                SizedBox(
+                  height: 16,
+                ),
               ],
             )),
             SliverFillRemaining(
@@ -34,7 +36,6 @@ class HomeViewBody extends StatelessWidget {
             )
           ],
         ),
-
       ),
     );
   }

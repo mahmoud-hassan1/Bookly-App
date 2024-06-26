@@ -7,31 +7,33 @@ class SimillarBooksSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height= MediaQuery.of(context).size.height;
-    return  Column(
+    final height = MediaQuery.of(context).size.height;
+    return Column(
       children: [
-             Padding(
-            padding: const EdgeInsets.only(left: 32),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Text(
-                "You can also like ",
-                style: Styles.textStyle15.copyWith(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w600
-                ),
-              ),
+        Padding(
+          padding: const EdgeInsets.only(left: 32),
+          child: Align(
+            alignment: Alignment.topLeft,
+            child: Text(
+              "You can also like ",
+              style: Styles.textStyle15
+                  .copyWith(color: Colors.white, fontWeight: FontWeight.w600),
             ),
           ),
-         const SizedBox(height: 8,),
-          Padding(
-            padding: const EdgeInsets.only(left: 24),
-            child: SizedBox(
-              height: height *.15 ,
-              child: const SimillarListView(),
-              ),
+        ),
+        const SizedBox(
+          height: 8,
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 24),
+          child: SizedBox(
+            height: height * .15,
+            child: const SimillarListView(),
           ),
-          const SizedBox(height: 32,),
+        ),
+        const SizedBox(
+          height: 32,
+        ),
       ],
     );
   }

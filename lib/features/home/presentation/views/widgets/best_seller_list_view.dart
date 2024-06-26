@@ -8,24 +8,27 @@ class BestSellerListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 50,),
-      child:  ListView.separated(
-        physics:const NeverScrollableScrollPhysics(),
+      padding: const EdgeInsets.only(
+        right: 50,
+      ),
+      child: ListView.separated(
+        physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         itemBuilder: (context, index) => GestureDetector(
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const BookDetailesView(),
-              ),
-            );
-          },
-          child: const BestSellerListViewItem()
-          ),
-        separatorBuilder: (context, index) => const SizedBox(height: 8,),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const BookDetailesView(),
+                ),
+              );
+            },
+            child: const BestSellerListViewItem()),
+        separatorBuilder: (context, index) => const SizedBox(
+          height: 8,
+        ),
         itemCount: 5,
-         ),
+      ),
     );
   }
 }

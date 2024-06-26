@@ -9,10 +9,13 @@ class SimillarListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-      padding: EdgeInsets.zero,
-      scrollDirection: Axis.horizontal,
-      itemBuilder: (context, index) => const BooksListViewItem(borderRadius: 15),
-       separatorBuilder:(context,index) => const SizedBox(width: 8,),
+        padding: EdgeInsets.zero,
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (context, index) =>
+            const BooksListViewItem(borderRadius: 15),
+        separatorBuilder: (context, index) => const SizedBox(
+              width: 8,
+            ),
         itemCount: 5);
   }
 }

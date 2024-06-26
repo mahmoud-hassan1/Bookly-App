@@ -8,45 +8,43 @@ class DetailesSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
           "The Jungle Book",
-          style: Styles.textStyle32.copyWith(
-            fontWeight: FontWeight.w600
-          ),
-          ),
+          style: Styles.textStyle32.copyWith(fontWeight: FontWeight.w600),
+        ),
         Text(
           "Rudyard kipling",
-          style: Styles.textStyle20.copyWith(
-              color: Colors.grey,
-              fontWeight: FontWeight.normal
-          ),
-          ),
+          style: Styles.textStyle20
+              .copyWith(color: Colors.grey, fontWeight: FontWeight.normal),
+        ),
         const SizedBox(height: 8),
         const RatingSection(),
         const SizedBox(height: 8),
-       const Padding(
-          padding:  EdgeInsets.symmetric(horizontal: 32),
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 32),
           child: Row(
             children: [
               Expanded(
-                child: CusttomButton(
-                  backGroundColor: Colors.white,
-                  textColor: Colors.black,
-                  title: "19.99€",
-                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(25),topLeft: Radius.circular(25)),
-                  )
-              ),
+                  child: CusttomButton(
+                backGroundColor: Colors.white,
+                textColor: Colors.black,
+                title: "19.99€",
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(25),
+                    topLeft: Radius.circular(25)),
+              )),
               Expanded(
-                child: CusttomButton(
-                  backGroundColor: Color(0XFFEF8262),
-                  textColor: Colors.white,
-                  title: "Free Preview",
-                  borderRadius: BorderRadius.only(bottomRight: Radius.circular(25),topRight: Radius.circular(25)),
-                  )
-              )
+                  child: CusttomButton(
+                backGroundColor: Color(0XFFEF8262),
+                textColor: Colors.white,
+                title: "Free Preview",
+                borderRadius: BorderRadius.only(
+                    bottomRight: Radius.circular(25),
+                    topRight: Radius.circular(25)),
+              ))
             ],
           ),
         )

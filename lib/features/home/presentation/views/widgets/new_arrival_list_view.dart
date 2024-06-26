@@ -6,13 +6,17 @@ class NewArrivalListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     final height =MediaQuery.of(context).size.height;
-    return  SizedBox(
-      height: height *.3 ,
+    final height = MediaQuery.of(context).size.height;
+    return SizedBox(
+      height: height * .3,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) => const BooksListViewItem(borderRadius: 25,),
-        separatorBuilder: (context, index) => const SizedBox(width: 8,),
+        itemBuilder: (context, index) => const BooksListViewItem(
+          borderRadius: 25,
+        ),
+        separatorBuilder: (context, index) => const SizedBox(
+          width: 8,
+        ),
         itemCount: 5,
       ),
     );
