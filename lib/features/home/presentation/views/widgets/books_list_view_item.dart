@@ -6,17 +6,13 @@ class BooksListViewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final width =MediaQuery.of(context).size.width;
-    return  SizedBox(
-      width: width *0.5,
-      child: AspectRatio(
-        aspectRatio: 2.2/3,
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(25),
-          child: Image.asset(Images.kBookImage,
-           fit :BoxFit.fill
-           ),
-        ),
+    return  AspectRatio(
+      aspectRatio: 2.7/4,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(25),
+        child: Image.asset(Images.kBookImage,
+         fit :BoxFit.fill
+         ),
       ),
     );
   }
