@@ -11,7 +11,7 @@ class NewArrivalListView extends StatelessWidget {
       height: height *.3 ,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) => const BooksListViewItem(),
+        itemBuilder: (context, index) => const BooksListViewItem(borderRadius: 25,),
         separatorBuilder: (context, index) => const SizedBox(width: 8,),
         itemCount: 5,
       ),
