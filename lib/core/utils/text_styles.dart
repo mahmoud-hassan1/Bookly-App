@@ -5,6 +5,10 @@ static const textStyle20= TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.w600,
   );
+   static const textStyle32= TextStyle(
+    fontSize: 32,
+    fontWeight: FontWeight.w400,
+  );
   static const textStyle22= TextStyle(
     fontSize: 23,
     fontWeight: FontWeight.w400,
