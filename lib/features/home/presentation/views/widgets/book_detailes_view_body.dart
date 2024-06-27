@@ -26,7 +26,10 @@ class BookDetailesViewBody extends StatelessWidget {
                     borderRadius: 25
                     ),
                 ),
-                const DetailesSection(),
+                 DetailesSection(
+                  author: book.volumeInfo!.authors![0],
+                  title: book.volumeInfo!.title!,
+                ),
                 const Expanded(
                     child: SizedBox(
                   height: 32,
