@@ -1,4 +1,6 @@
 import 'package:bookly/core/utils/images.dart';
+import 'package:bookly/core/widgets/loading_widget.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class BooksListViewItem extends StatelessWidget {
@@ -11,7 +13,11 @@ class BooksListViewItem extends StatelessWidget {
       aspectRatio: 2.8 / 4,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(borderRadius),
-        child: Image.network(img, fit: BoxFit.fill),
+        child: CachedNetworkImage(
+            fit: BoxFit.fill, imageUrl: img,
+            placeholder: (context, url) => const LoadingWidget(),
+            errorWidget: (context, url, error) => const Icon(Icons.error),
+           ),
       ),
     );
   }
