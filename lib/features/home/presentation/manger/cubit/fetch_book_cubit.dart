@@ -9,6 +9,11 @@ part 'fetch_book_state.dart';
 class FetchBookCubit extends Cubit<FetchBookState> {
   FetchBookCubit(this.repo) : super(FetchBookInitial());
  final HomeRepoImpl repo;
-  fetchBestSeller(){
+  fetchBestSeller()async{
+    var res = await repo.fetchBestSellerBooks();
+    res.fold(
+      (failure) => emit(FetchBookFailed(failure.errorMessage)),
+       (books) =>emit(FetchBookSuccess(books)));
   }
+  
 }
