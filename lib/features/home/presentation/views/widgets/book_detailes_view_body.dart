@@ -29,6 +29,7 @@ class BookDetailesViewBody extends StatelessWidget {
                  DetailesSection(
                   author: book.volumeInfo!.authors![0],
                   title: book.volumeInfo!.title!,
+                  link: book.volumeInfo!.previewLink!,
                 ),
                 const Expanded(
                     child: SizedBox(

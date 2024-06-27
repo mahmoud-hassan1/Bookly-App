@@ -7,18 +7,19 @@ class CusttomButton extends StatelessWidget {
       required this.title,
       required this.textColor,
       required this.backGroundColor,
-      required this.borderRadius});
+      required this.borderRadius, this.onpressed});
   final String title;
   final Color textColor;
   final Color backGroundColor;
   final BorderRadius borderRadius;
+  final void Function()? onpressed;
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     return SizedBox(
       height: height * .07,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onpressed,
         style: ElevatedButton.styleFrom(
             shape: RoundedRectangleBorder(
               borderRadius: borderRadius,
