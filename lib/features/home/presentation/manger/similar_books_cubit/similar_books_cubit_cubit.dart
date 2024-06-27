@@ -5,8 +5,8 @@ import 'package:bookly/features/home/data/repos/home_repo_impl.dart';
 
 part 'similar_books_cubit_state.dart';
 
-class SimilarBooksCubitCubit extends Cubit<SimilarBooksCubitState> {
-  SimilarBooksCubitCubit(this.repo) : super(SimilarBooksCubitInitial());
+class SimilarBooksCubit extends Cubit<SimilarBooksState> {
+  SimilarBooksCubit(this.repo) : super(SimilarBooksInitial());
    final HomeRepoImpl repo;
    fetchSimilarBooks(String category)async{
     emit(FetchBookLoading());
