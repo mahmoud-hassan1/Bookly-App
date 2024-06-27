@@ -26,11 +26,13 @@ class BestSellerListView extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const BookDetailesView(),
+                      builder: (context) =>  BookDetailesView(
+                        book: state.books[index],
+                      ),
                     ),
                   );
                 },
-                child: const BestSellerListViewItem()),
+                child:  BestSellerListViewItem(book: state.books[index],)),
             separatorBuilder: (context, index) => const SizedBox(
               height: 8,
             ),

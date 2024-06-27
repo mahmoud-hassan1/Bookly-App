@@ -12,7 +12,10 @@ class SimillarListView extends StatelessWidget {
         padding: EdgeInsets.zero,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) =>
-            const BooksListViewItem(borderRadius: 15),
+            const BooksListViewItem(
+              img:  "https://cdn.pixabay.com/photo/2016/10/04/13/52/fail-1714367_960_720.jpg",
+              borderRadius: 15,
+              ),
         separatorBuilder: (context, index) => const SizedBox(
               width: 8,
             ),

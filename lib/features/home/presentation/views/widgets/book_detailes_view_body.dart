@@ -1,3 +1,4 @@
+import 'package:bookly/features/home/data/Models/book_model/book_model.dart';
 import 'package:bookly/features/home/presentation/views/widgets/book_detailes_custom_app_bar.dart';
 import 'package:bookly/features/home/presentation/views/widgets/books_list_view_item.dart';
 import 'package:bookly/features/home/presentation/views/widgets/detailes_section.dart';
@@ -5,8 +6,8 @@ import 'package:bookly/features/home/presentation/views/widgets/simillar_books_s
 import 'package:flutter/material.dart';
 
 class BookDetailesViewBody extends StatelessWidget {
-  const BookDetailesViewBody({super.key});
-
+  const BookDetailesViewBody({super.key, required this.book});
+  final BookModel book;
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -20,7 +21,10 @@ class BookDetailesViewBody extends StatelessWidget {
                 const BookDetailesCustomAppBar(),
                 SizedBox(
                   height: height * .36,
-                  child: const BooksListViewItem(borderRadius: 25),
+                  child:  BooksListViewItem(
+                    img: book.volumeInfo!.imageLinks!.smallThumbnail!,
+                    borderRadius: 25
+                    ),
                 ),
                 const DetailesSection(),
                 const Expanded(

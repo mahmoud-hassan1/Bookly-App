@@ -1,22 +1,24 @@
 import 'package:bookly/core/utils/text_styles.dart';
+import 'package:bookly/features/home/data/Models/book_model/book_model.dart';
 import 'package:bookly/features/home/presentation/views/widgets/books_list_view_item.dart';
 import 'package:bookly/features/home/presentation/views/widgets/rating_section.dart';
 import 'package:flutter/material.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({super.key});
-
+  const BestSellerListViewItem({super.key, required this.book});
+  final BookModel book;
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     return SizedBox(
       height: height * .16,
-      child: const Row(
+      child:  Row(
         children: [
           BooksListViewItem(
+            img: book.volumeInfo!.imageLinks!.smallThumbnail!,
             borderRadius: 15,
           ),
-          SizedBox(
+        const  SizedBox(
             width: 16,
           ),
           Expanded(
@@ -25,22 +27,22 @@ class BestSellerListViewItem extends StatelessWidget {
               children: [
                 Flexible(
                     child: Text(
-                  "Harry Potter and the Goblet of Fire",
+                  book.volumeInfo!.title!,
                   style: Styles.textStyle22,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 )),
                 Text(
-                  "J.K Rowling",
+                  book.volumeInfo!.authors![0],
                   style: Styles.textStyle15,
                 ),
-                SizedBox(
+               const SizedBox(
                   height: 12,
                 ),
                 Row(
                   children: [
                     Text(
-                      "1400 €",
+                    "${book.saleInfo?.listPrice?.amount  ??  0}",
                       style: Styles.textStyle17,
                     ),
                     Spacer(),
