@@ -14,7 +14,6 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     BlocProvider.of<BestSellerCubit>(context).fetchBestSeller();
     BlocProvider.of<NewArrivalCubit>(context).fetchNewArrivalBooks();

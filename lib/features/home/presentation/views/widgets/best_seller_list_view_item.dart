@@ -39,10 +39,10 @@ class BestSellerListViewItem extends StatelessWidget {
                const SizedBox(
                   height: 12,
                 ),
-                Row(
+              const  Row(
                   children: [
                     Text(
-                    "${book.saleInfo?.listPrice?.amount  ??  0}",
+                    "Free",
                       style: Styles.textStyle17,
                     ),
                     Spacer(),

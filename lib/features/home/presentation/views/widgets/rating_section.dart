@@ -2,8 +2,8 @@ import 'package:bookly/core/utils/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class RatingSection extends StatelessWidget {
-  const RatingSection({super.key});
-
+  const RatingSection({super.key,});
+ 
   @override
   Widget build(BuildContext context) {
     return const Row(
