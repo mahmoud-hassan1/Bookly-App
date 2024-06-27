@@ -47,7 +47,7 @@ class DetailesSection extends StatelessWidget {
                   child: CusttomButton(
                     onpressed: ()async{
                       Uri uri=Uri.parse(link);
-                      if(!await canLaunchUrl(uri) ){
+                      if(await canLaunchUrl(uri) ){
                        await launchUrl(uri);
                         
                       }
