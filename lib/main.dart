@@ -5,12 +5,17 @@ import 'package:bookly/features/home/presentation/manger/best_seller_cubit/best_
 import 'package:bookly/features/home/presentation/manger/new_arrival_cubit/new_arrival_cubit.dart';
 import 'package:bookly/features/home/presentation/manger/similar_books_cubit/similar_books_cubit_cubit.dart';
 import 'package:bookly/features/splash/presentation/views/splash_view.dart';
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 void main() {
   setupService();
-  runApp(const MyApp());
+   
+  runApp(DevicePreview(
+    enabled: false,
+    builder: (context) => const MyApp(), // Wrap your app
+  ));
 }
 
 class MyApp extends StatelessWidget {

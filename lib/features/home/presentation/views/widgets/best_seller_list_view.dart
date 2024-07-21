@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:bookly/core/widgets/failure_widget.dart';
 import 'package:bookly/core/widgets/loading_widget.dart';
 import 'package:bookly/features/home/presentation/manger/best_seller_cubit/best_seller_cubit.dart';
