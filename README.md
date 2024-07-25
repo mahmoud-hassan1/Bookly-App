@@ -44,7 +44,6 @@ lib/
 ## Explanation
 
   - data/: Contains the data layer of the application, including models, repositories, and data sources.
-  - domain/: Contains the domain layer, which includes entities, repositories interfaces, and use cases.
   - presentation/: Contains the presentation layer, which includes blocs (using Cubit), views, viewmodels, and widgets.
   - core/: Contains core functionalities, constants, utilities, and error handling.
   - main.dart: Entry point of the application.
