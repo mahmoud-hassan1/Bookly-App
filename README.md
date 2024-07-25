@@ -30,10 +30,6 @@ lib/
 |   |-- models/
 |   |-- repositories/
 |
-|-- domain/
-|   |-- entities/
-|   |-- repositories/
-|
 |-- presentation/
 |   |-- blocs/
 |   |-- views/
