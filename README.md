@@ -13,7 +13,7 @@ Bookly is a mobile application built using Flutter that allows users to view fre
 
 1. Clone the repository:
 
-   git clone https://github.com/yourusername/bookly.git
+   git clone https://github.com/mahmoud-hassan1/Bookly-App.git
   
 2. Install dependencies:
 
