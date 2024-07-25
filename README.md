@@ -6,7 +6,6 @@ Bookly is a mobile application built using Flutter that allows users to view fre
 
 - View Free Programming Books: Browse a collection of free books related to various programming topics.
 - Book Details: View detailed information about each book.
-- Clean Architecture: The app is structured with a clean architecture for better maintainability and testability.
 - MVVM Pattern: Utilizes the MVVM pattern to separate concerns and facilitate easier UI updates.
 - BLoC with Flutter Cubit: Manages state and business logic using the BLoC pattern with the Flutter Cubit package.
 
